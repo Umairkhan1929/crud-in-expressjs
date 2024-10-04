@@ -1,14 +1,14 @@
 import express from 'express'
 
-// const PORT = 3000
-// const app = express()
+const PORT = 3000
+const app = express()
 
-// // json middleware
-// app.use(express.json())
+ // json middleware
+app.use(express.json())
 
-// app.get('/api/items', (req, res) => {
-//     res.status(200).json({ message: 'GET request - Fetching all items' });
-// })
+app.get('/api/items', (req, res) => {
+    res.status(200).json({ message: 'GET request - Fetching all items' });
+})
 
 // app.post('/api/items', (req, res) => {
 //     const newItem = req.body;
@@ -29,6 +29,6 @@ import express from 'express'
 //     res.status(200).json({ message: `DELETE request - Deleting item ${itemId}` })
 // })
 
-// app.listen(PORT, () => {
-//     console.log(`Server is listening here: http://localhost:${PORT}`)
-// })
+app.listen(PORT, () => {
+    console.log(`Server is listening here: http://localhost:${PORT}`)
+})
