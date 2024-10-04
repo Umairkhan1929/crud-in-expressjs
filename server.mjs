@@ -16,12 +16,12 @@ app.post('/api/items', (req, res) => {
     res.status(201).json({ message: 'New item created!', data: newItem })
 })
 
-// // update item
-// app.put('/api/items/:id', (req, res) => {
-//     const itemId = req.params.id
-//     const updatedItem = req.body
-//     res.status(200).json({ message: `PUT request - Updating item ${itemId}`, data: updatedItem })
-// })
+ // update item
+app.put('/api/items/:id', (req, res) => {
+    const itemId = req.params.id
+    const updatedItem = req.body
+    res.status(200).json({ message: `PUT request - Updating item ${itemId}`, data: updatedItem })
+})
 
 // // delete item
 // app.delete('/api/items/:id', (req, res) => {
