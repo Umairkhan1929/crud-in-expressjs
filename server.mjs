@@ -23,11 +23,11 @@ app.put('/api/items/:id', (req, res) => {
     res.status(200).json({ message: `PUT request - Updating item ${itemId}`, data: updatedItem })
 })
 
-// // delete item
-// app.delete('/api/items/:id', (req, res) => {
-//     const itemId = req.params.id
-//     res.status(200).json({ message: `DELETE request - Deleting item ${itemId}` })
-// })
+ // delete item
+app.delete('/api/items/:id', (req, res) => {
+    const itemId = req.params.id
+    res.status(200).json({ message: `DELETE request - Deleting item ${itemId}` })
+})
 
 app.listen(PORT, () => {
     console.log(`Server is listening here: http://localhost:${PORT}`)
